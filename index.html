@@ -5,21 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Wild Hangman Game</title>
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="assets/css/reset.css">
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <!-- Reset CSS -->
-    <link rel="stylesheet" href="assets/css/reset.csss">
+    <!-- Bootstrap CDN -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 </head>
 <body>
-    <h1>Hangman</h1>
-</body>
     <div class="container">
         <header>
             <h1>Hangman Game</h1>
-            <h3>Wild Hangman Game</h3>
+            <h2>Wild West Hangman Game</h2>
         </header>
-        <div class="underscores">_ _ _ _</div>
-        <div class="rightGuess">Right Guess</div>
-        <div class="wrongGuess">Wrong Guess</div>
-    </div>
+
+        <br>
+
+        <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Word to Guess</h3>
+                </div>
+                <div class="panel-body">
+                    <h2 id="wordToGuess">_ _ _ _ _ _ _</h2>
+                </div>
+            </div>
+             
+            <div class="panel panel-default">
+                 <div class="panel-body">
+                     Wrong Guesses: <span id="wrongGuesses"></span>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Guesses Left: <span id="numGuesses"></span>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Win Counter: <span id="winCounter">0</span>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    Loss Counter:  <span id="lossCounter">0</span>
+                </div>
+            </div>
+            
+        </div>
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+    <br>
+    <hr>
+    <br>
+        <div id="footer" style="clear:both">© Copyright 2019 Suraj A Patel</div>
+
 </html>
