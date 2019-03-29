@@ -12,7 +12,7 @@ var doubleWord = ['a','b','c',
                   'y','z'];
                   
 //Holds the all the words
-var wordBank =["buckaroo","buzzards","cattle","campfire","cowboy","high Noon","lasso","buckaroo","outlaw"];
+var wordBank =["buckaroo","buzzards","cattle","campfire","cowboy","highnoon","lasso","buckaroo","outlaw", "reward", "wanted", "governer", "arrest", "vest", "boot", "homestead", "sheriff"];
 
 //Holds choosenWord
 var choosenWord = "";
@@ -95,15 +95,15 @@ function startGame()
     
 	{
 		blanksAndSuccesses.push('_');
-		document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses;
+		document.getElementById('wordToGuess').textContent = blanksAndSuccesses;
 	}
 
-    //Changes HTML 
-	document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(' ');
-	document.getElementById('numGuesses').innerHTML = guessesLeft;
-	document.getElementById('winCounter').innerHTML = winCount;
-	document.getElementById('lossCounter').innerHTML = loseCount;
-    document.getElementById('wrongGuesses').innerHTML = wrongLetters;
+    //Changes Text Content
+	document.getElementById('wordToGuess').textContent = blanksAndSuccesses.join(' ');
+	document.getElementById('numGuesses').textContent = guessesLeft;
+	document.getElementById('winCounter').textContent = winCount;
+	document.getElementById('lossCounter').textContent = loseCount;
+    document.getElementById('wrongGuesses').textContent = wrongLetters;
 }
 
 function compareLetters(userKey)
@@ -119,7 +119,7 @@ function compareLetters(userKey)
 						{
 							rightGuessCounter++;
 							blanksAndSuccesses[i] = userKey;
-							document.getElementById('wordToGuess').innerHTML = blanksAndSuccesses.join(' ');
+							document.getElementById('wordToGuess').textContent = blanksAndSuccesses.join(' ');
 						}	
 					}
 				}
@@ -129,8 +129,8 @@ function compareLetters(userKey)
 					wrongLetters.push(userKey);
 					guessesLeft--;
 					// Changes HTML
-					document.getElementById('numGuesses').innerHTML = guessesLeft;
-					document.getElementById('wrongGuesses').innerHTML = wrongLetters;
+					document.getElementById('numGuesses').textContent = guessesLeft;
+					document.getElementById('wrongGuesses').textContent = wrongLetters;
 				}
 			
 			
@@ -144,8 +144,8 @@ function winLose()
 		//Counts Wins 
 		winCount++;
 		//Changes HTML
-		document.getElementById('winCounter').innerHTML = winCount;
-		alert('You Win');
+		document.getElementById('winCounter').textContent = winCount;
+		alert('You Win! Yee-Haw! Word was: ' + choosenWord);
 		reset();
 	}
 	// When number of Guesses reaches 0 then You lose
@@ -154,8 +154,8 @@ function winLose()
 		// Counts losses
 		loseCount++;
 		// Changes HTML
-		document.getElementById('lossCounter').innerHTML = loseCount;
-		alert('You Lose');
+		document.getElementById('lossCounter').textContent = loseCount;
+		alert('You Lose correct answer was: ' + choosenWord);
 		reset();
 	}
 }
