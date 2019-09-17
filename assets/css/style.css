@@ -64,16 +64,15 @@ header {
    border: 1px solid black;
    font-size: 25px;
    text-align: center;
-   margin: 0 auto;
    height: 39px;
    width: 1250px;
    background-image: url(../images/header.bg.png);
    background-position-x: -284px;
    background-position-y: -322px;
    background-repeat: no-repeat;
-   margin-left: 130px
-}
+   margin: 0 auto;
 
-.hr {
-   width: 1154px
+   margin-top: 50px;
+   margin-left: 150px;
+   
 }
